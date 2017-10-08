@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.josmer.testkotlin.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <Button
+        android:id="@+id/botoncito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:gravity="center"
+        android:text="Boton De Pruebas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/imp"
+        android:layout_width="98dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Current"
+        android:inputType="numberSigned"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/botoncito"
+        app:layout_constraintEnd_toStartOf="@+id/power"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchCurrent" />
+
+    <EditText
+        android:id="@+id/resistance"
+        android:layout_width="98dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Resistance"
+        android:inputType="numberSigned"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/switchPower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/volt"
+        app:layout_constraintTop_toBottomOf="@+id/switchResistance"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/volt"
+        android:layout_width="101dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Volt"
+        android:inputType="numberDecimal"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/switchCurrent"
+        app:layout_constraintEnd_toStartOf="@+id/resistance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchResistance"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/power"
+        android:layout_width="101dp"
+        android:layout_height="42dp"
+        android:contentDescription="Power"
+        android:ems="10"
+        android:hint="Power"
+        android:inputType="numberSigned"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/botoncito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imp"
+        app:layout_constraintTop_toBottomOf="@+id/switchPower"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/ecuation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Ecuation"
+        app:layout_constraintBottom_toTopOf="@+id/botoncito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current"
+        app:layout_constraintBottom_toTopOf="@+id/imp"
+        app:layout_constraintEnd_toStartOf="@+id/switchPower"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volt" />
+
+    <Switch
+        android:id="@+id/switchVolt"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:text="Volt"
+        app:layout_constraintBottom_toTopOf="@+id/volt"
+        app:layout_constraintEnd_toStartOf="@+id/switchResistance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Power"
+        app:layout_constraintBottom_toTopOf="@+id/power"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/switchCurrent"
+        app:layout_constraintTop_toBottomOf="@+id/resistance"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/switchResistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resistance"
+        app:layout_constraintBottom_toTopOf="@+id/resistance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/switchVolt"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</android.support.constraint.ConstraintLayout>
